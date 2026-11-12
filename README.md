@@ -1,54 +1,21 @@
 # Nikkolai Yabut | ITE Portfolio
 
-A responsive, static student portfolio for GitHub Pages. It includes Home, Contents, Prelim, Midterm, Final, Reflection, and Profile sections. Course entries are published from `portfolio-data.json`; files and screenshots referenced there should be committed with the site.
+A responsive student portfolio for GitHub Pages with Home, Contents, Prelim, Midterm, Final, Reflection, and Profile sections.
 
-## Preview locally
+## Run locally
 
-Open this folder in VS Code and start Live Server from `index.html`, or run any static HTTP server from this folder. The page uses `fetch()` to load the portfolio data, so opening `index.html` directly as a `file://` URL will not load entries.
+Open this folder in VS Code and run Live Server from `index.html`, or serve this folder with any static HTTP server. The portfolio uses `fetch()` for `portfolio-data.json`, so opening the HTML directly through a `file://` URL will not load the site data.
 
-## Add a published entry
+## Add course entries while preparing the portfolio
 
-This is a view-only static site. A browser upload cannot publish a file to GitHub Pages or share it across devices. To publish work, place the files in this repository, add an entry to `portfolio-data.json`, then commit and push the changes.
+Open the **Upload course materials** panel in Prelim, Midterm, or Final. Each entry can include its category, title, activity number, documents, submission screenshots, instructions, procedure, and results. Choose at least one document or screenshot. Activity numbers sort in ascending order within their category. Saved drafts remain in IndexedDB in the current browser profile; they do not automatically appear in another browser or device.
 
-Example entry:
+Use **Export portfolio data** after adding entries. It downloads a `portfolio-data.json` containing the published entries plus drafts and embedded attachments. Replace the repository's `portfolio-data.json` with the exported file and commit/push that change to publish the entries across devices. Treat the exported file as the master copy and keep it somewhere safe. Attachment data is embedded in that JSON, so large attachments make the export larger. Individual uploads are limited to 25 MB.
 
-```json
-{
-  "id": "prelim-activity-1",
-  "term": "prelim",
-  "category": "classroom",
-  "title": "Prelim Activity No. 1 - Example",
-  "activityNumber": 1,
-  "description": "A short summary of the activity.",
-  "instructions": "The activity instructions or problem statement.",
-  "solution": "A short note about the procedure or source code.",
-  "results": "What the output demonstrates.",
-  "createdAt": "2026-11-12",
-  "files": [
-    {
-      "name": "activity-output.pdf",
-      "src": "assets/prelim/activity-output.pdf",
-      "type": "application/pdf",
-      "size": 12345
-    }
-  ],
-  "screenshots": [
-    {
-      "name": "submission.png",
-      "src": "assets/prelim/submission.png",
-      "type": "image/png",
-      "size": 54321
-    }
-  ]
-}
-```
+The upload panels are preparation tools. Once the portfolio is finalized, remove the uploader forms, browser draft JavaScript, and export panel to make the site view-only.
 
-Use `prelim`, `midterm`, or `final` for `term`. Categories are `classroom`, `laboratory`, `quiz`, `project`, `exam`, or `other`. Activity numbers sort in ascending order within each category. Screenshots display inline; documents have download links. All attachment paths must point to files committed in this site and should be relative to this portfolio's root.
+## GitHub Pages
 
-## Publish with GitHub Pages
-
-In the repository settings, open **Pages**, select **Deploy from a branch**, choose the `main` branch and `/ (root)`, then save. Once the Pages deployment finishes, the site is expected at:
+The live site is published from the repository's `main` branch root at:
 
 `https://nikkolaiiii.github.io/ITE_E_Portfolio/`
-
-GitHub Pages serves committed files only; it does not persist uploads made in a visitor's browser.

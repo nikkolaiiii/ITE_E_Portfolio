@@ -349,3 +349,39 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Temporary draft-entry tools used while the portfolio is being prepared. */
+.draft-publication-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 28px; margin-top: 32px; padding: 25px 28px; background: var(--sage); border: 1px solid var(--line); }
+.draft-publication-panel .eyebrow { margin-bottom: 8px; }
+.draft-publication-panel h3 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; font-weight: 400; }
+.draft-publication-panel > div > p:last-child { max-width: 680px; margin: 7px 0 0; color: var(--muted); font-size: .72rem; }
+.draft-storage-status { grid-column: 1 / -1; margin: 6px 0 0; color: var(--muted); font-size: .64rem; }
+.entry-uploader { margin-top: 20px; border-top: 1px solid var(--line); }
+.entry-uploader > summary { padding: 17px 0 4px; color: var(--rust); cursor: pointer; font-size: .65rem; font-weight: 700; letter-spacing: .1em; list-style-position: inside; text-transform: uppercase; }
+.entry-upload-form { display: grid; gap: 15px; padding: 18px; background: color-mix(in srgb, var(--ink) 3%, transparent); border: 1px solid var(--soft-line); }
+.entry-upload-form label { display: grid; gap: 7px; color: var(--ink); font-size: .67rem; font-weight: 700; }
+.upload-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.upload-grid label:last-child { grid-column: 1 / -1; }
+.entry-upload-form input:not([type="file"]), .entry-upload-form select, .entry-upload-form textarea, .entry-upload-form input[type="file"] { width: 100%; min-height: 42px; padding: 9px 11px; color: var(--ink); background: var(--paper-raised); border: 1px solid var(--line); border-radius: 0; font: inherit; font-size: .7rem; }
+.entry-upload-form input[type="file"] { min-height: 48px; }
+.entry-upload-form textarea { min-height: 74px; resize: vertical; }
+.entry-upload-form input::placeholder, .entry-upload-form textarea::placeholder { color: var(--muted); opacity: .8; }
+.optional-note { color: var(--muted); font-size: .58rem; font-weight: 400; }
+.upload-help { margin: -3px 0 0; color: var(--muted); font-size: .66rem; }
+.upload-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.upload-actions .button { min-height: 43px; cursor: pointer; }
+.upload-actions .button:disabled, #export-portfolio:disabled { cursor: progress; opacity: .65; }
+.form-status { min-height: 1.2em; margin: 0; color: var(--muted); font-size: .64rem; }
+.form-status.is-error { color: #a33d2b; }
+.entry-draft-badge { color: var(--green-deep); background: var(--sage); }
+.remove-draft-button { margin-top: 18px; padding: 9px 12px; color: var(--rust); background: transparent; border: 1px solid var(--line); cursor: pointer; font: inherit; font-size: .62rem; }
+.remove-draft-button:hover { color: #fff; background: var(--rust); }
+body[data-theme="dark"] .entry-draft-badge { color: var(--ink); }
+@media (max-width: 760px) {
+  .draft-publication-panel { grid-template-columns: 1fr; gap: 14px; padding: 19px; }
+  .draft-publication-panel > .button { justify-self: start; }
+  .draft-storage-status { grid-column: 1; }
+  .entry-upload-form { padding: 13px; }
+  .upload-grid { grid-template-columns: 1fr; }
+  .upload-grid label:last-child { grid-column: 1; }
+}
