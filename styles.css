@@ -85,10 +85,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
 .text-link { color: var(--ink); font-size: .67rem; font-weight: 700; text-decoration-color: var(--rust); text-underline-offset: 5px; }
 .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 42px; color: var(--muted); font-size: .62rem; letter-spacing: .035em; }
 .note-line { width: 38px; height: 1px; background: var(--rust); }
-.hero-visual { position: relative; min-height: 490px; overflow: hidden; background: #294438; isolation: isolate; }
-.hero-visual::before { position: absolute; z-index: -1; right: -12%; bottom: -29%; width: 85%; aspect-ratio: 1; background: #b9674c; border-radius: 50%; content: ''; opacity: .95; }
+.hero-visual { position: relative; min-height: 490px; overflow: hidden; background: transparent; isolation: isolate; }
+.hero-visual::before { position: absolute; z-index: -1; right: 0; bottom: 0; width: min(78%, 420px); aspect-ratio: 1; background: #b9674c; border-radius: 50%; content: ''; opacity: .95; }
 .hero-visual::after { position: absolute; z-index: -1; top: 9%; right: 8%; width: 53%; aspect-ratio: 1; border: 1px solid rgba(250, 244, 232, .35); border-radius: 50%; content: ''; }
-.visual-grid { position: absolute; z-index: -1; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 34px 34px; mask-image: linear-gradient(145deg, black, transparent 80%); }
+.visual-grid { position: absolute; z-index: -1; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 34px 34px; -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 74%); mask-image: radial-gradient(ellipse at center, #000 0%, transparent 74%); }
 .visual-sun { position: absolute; z-index: -1; top: 8%; left: 12%; width: 36%; aspect-ratio: 1; background: #e8cbb5; border-radius: 50%; opacity: .95; }
 .visual-ring { position: absolute; z-index: -1; border: 1px solid rgba(251, 244, 235, .34); border-radius: 50%; }
 .visual-ring-one { top: 16%; left: 17%; width: 69%; aspect-ratio: 1; }
@@ -220,7 +220,7 @@ body[data-theme="dark"] .course-summary p { color: #f3eee6; }
 
 .profile-section { padding-block: 96px; color: #f5eee4; background: var(--green-deep); }
 .profile-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(50px, 9vw, 130px); }
-.profile-art { position: relative; display: grid; min-height: 430px; overflow: hidden; place-items: center; background: linear-gradient(145deg, #ead9cb, #cba98e); }
+.profile-art { position: relative; display: grid; min-height: 430px; overflow: hidden; place-items: center; background: transparent; }
 .profile-art::before { position: absolute; z-index: 0; width: 75%; aspect-ratio: 1; background: #b45e45; border-radius: 50%; content: ''; opacity: .92; }
 .profile-art::after { position: absolute; z-index: 2; inset: 13%; border: 1px solid rgba(34, 53, 42, .42); border-radius: 50%; content: ''; pointer-events: none; }
 .profile-orbit { position: absolute; z-index: 2; width: 57%; aspect-ratio: 1; border: 1px solid rgba(34, 53, 42, .4); border-radius: 50%; pointer-events: none; }
@@ -348,4 +348,12 @@ body[data-theme="dark"] .course-summary p { color: #f3eee6; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+.hero-portrait,
+.profile-portrait {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 16%, #000 84%, transparent 100%), linear-gradient(0deg, transparent 0%, #000 13%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 16%, #000 84%, transparent 100%), linear-gradient(0deg, transparent 0%, #000 13%, #000 100%);
+  mask-composite: intersect;
 }
