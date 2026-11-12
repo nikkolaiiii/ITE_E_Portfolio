@@ -6,6 +6,9 @@
   <meta name="theme-color" content="#f4eee8">
   <meta name="description" content="Nikkolai Yabut's Information Technology class portfolio.">
   <title>Nikkolai Yabut | ITE Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -57,15 +60,15 @@
         <div class="hero-note"><span class="note-line"></span><span>Class activities, projects, and reflections</span></div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="Nikkolai Yabut monogram artwork">
+      <div class="hero-visual reveal">
         <div class="visual-grid" aria-hidden="true"></div>
         <div class="visual-sun" aria-hidden="true"></div>
         <div class="visual-ring visual-ring-one" aria-hidden="true"></div>
         <div class="visual-ring visual-ring-two" aria-hidden="true"></div>
-        <div class="monogram-card"><span class="monogram-kicker">INFORMATION TECHNOLOGY</span><strong>NY</strong><span class="monogram-caption">Nikkolai<br>Yabut</span></div>
+        <img class="hero-portrait" src="assets/nikkolai-yabut.png" alt="Portrait of Nikkolai Yabut">
         <div class="floating-label label-top"><span>01</span><b>LEARN</b></div>
         <div class="floating-label label-bottom"><span>02</span><b>MAKE</b></div>
-        <div class="visual-caption">A portfolio in progress <span>2026-2027</span></div>
+        <div class="visual-caption">Course portfolio <span>2026-2027</span></div>
       </div>
     </section>
 
@@ -93,173 +96,28 @@
           <input id="entry-search" type="search" placeholder="Search titles, categories, and descriptions" autocomplete="off">
           <p id="entry-status" class="entry-status" aria-live="polite">Loading portfolio entries...</p>
         </div>
-        <div class="draft-publication-panel">
-          <div><p class="eyebrow"><span></span> PORTFOLIO DRAFT</p><h3>Preparing your course entries</h3><p>Drafts are saved in this browser. Export a publication file to carry your entries and attachments into the final portfolio data file.</p></div>
-          <button id="export-portfolio" class="button button-dark" type="button">Export portfolio data <span aria-hidden="true">&#8595;</span></button>
-          <p id="draft-storage-status" class="draft-storage-status" role="status" aria-live="polite">Checking draft storage...</p>
-        </div>
+
       </div>
     </section>
 
     <section class="portfolio-section" id="prelim" aria-labelledby="prelim-title">
       <div class="site-width portfolio-layout">
         <div class="portfolio-intro reveal"><p class="eyebrow"><span></span> COURSE PORTFOLIO <b>01</b></p><h2 id="prelim-title">Prelim<span>.</span></h2><p>Foundational activities and early explorations from the course.</p><a class="section-jump" href="#contents">Back to contents <span aria-hidden="true">&#8593;</span></a></div>
-        <div class="portfolio-panel reveal"><div class="panel-heading"><div><span>TERM ONE</span><h3>Prelim portfolio</h3></div><span class="entry-count" data-count="prelim">0 entries</span></div><p class="entry-empty" data-empty-state="prelim">Nikkolai's prelim work will appear here when its portfolio entries are added.</p><div class="entry-list" data-entry-list="prelim" aria-live="polite"></div>
-        <details class="entry-uploader">
-          <summary>Upload course materials</summary>
-          <form class="entry-upload-form" data-entry-form="prelim">
-            <div class="upload-grid">
-              <label>Portfolio category
-                <select name="category" required>
-                  <option value="">Choose a category</option>
-                  <option value="classroom">Classroom Activities and Exercises</option>
-                  <option value="laboratory">Laboratory Activities</option>
-                  <option value="quiz">Quizzes and Assessments</option>
-                  <option value="project">Projects and Performance Tasks</option>
-                  <option value="exam">Examination Results</option>
-                  <option value="other">Other Course Materials</option>
-                </select>
-              </label>
-              <label>Activity or document title
-                <input name="title" type="text" maxlength="180" placeholder="e.g. Activity No. 1 - Data Analysis" required>
-              </label>
-              <label>Activity number <span class="optional-note">optional; used for ascending order</span>
-                <input name="activityNumber" type="number" min="1" step="1" placeholder="e.g. 1">
-              </label>
-            </div>
-            <label>Documents <span class="optional-note">optional; add one or more files</span>
-              <input name="documents" type="file" multiple>
-            </label>
-            <label>Submission screenshots <span class="optional-note">optional; add one or more images</span>
-              <input name="screenshots" type="file" accept="image/png,image/jpeg,image/gif,image/webp" multiple>
-            </label>
-            <p class="upload-help">Attach a document, screenshots, or both. Files are saved in this browser while you prepare the portfolio. Export the portfolio data when you are ready to publish your entries across devices.</p>
-            <label>Description <span class="optional-note">optional</span>
-              <textarea name="description" rows="2" maxlength="1500" placeholder="Briefly describe this activity."></textarea>
-            </label>
-            <label>Instructions or problem statement <span class="optional-note">optional</span>
-              <textarea name="instructions" rows="3" maxlength="5000" placeholder="Add the instructions or problem statement."></textarea>
-            </label>
-            <label>Source code, procedures, or solutions <span class="optional-note">optional</span>
-              <textarea name="solution" rows="3" maxlength="5000" placeholder="Describe the work or procedure."></textarea>
-            </label>
-            <label>Results and explanation <span class="optional-note">optional</span>
-              <textarea name="results" rows="3" maxlength="3000" placeholder="Summarize the result or what you learned."></textarea>
-            </label>
-            <div class="upload-actions">
-              <button class="button button-dark" type="submit">Save this entry <span aria-hidden="true">&#8594;</span></button>
-              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-            </div>
-          </form>
-        </details></div>
+        <div class="portfolio-panel reveal"><div class="panel-heading"><div><span>TERM ONE</span><h3>Prelim portfolio</h3></div><span class="entry-count" data-count="prelim">0 entries</span></div><p class="entry-empty" data-empty-state="prelim">No entries are available in this section yet.</p><div class="entry-list" data-entry-list="prelim" aria-live="polite"></div></div>
       </div>
     </section>
 
     <section class="portfolio-section portfolio-midterm" id="midterm" aria-labelledby="midterm-title">
       <div class="site-width portfolio-layout">
         <div class="portfolio-intro reveal"><p class="eyebrow"><span></span> COURSE PORTFOLIO <b>02</b></p><h2 id="midterm-title">Midterm<span>.</span></h2><p>Work that develops ideas through practice, analysis, and iteration.</p><a class="section-jump" href="#contents">Back to contents <span aria-hidden="true">&#8593;</span></a></div>
-        <div class="portfolio-panel reveal"><div class="panel-heading"><div><span>TERM TWO</span><h3>Midterm portfolio</h3></div><span class="entry-count" data-count="midterm">0 entries</span></div><p class="entry-empty" data-empty-state="midterm">Nikkolai's midterm work will appear here when its portfolio entries are added.</p><div class="entry-list" data-entry-list="midterm" aria-live="polite"></div>
-        <details class="entry-uploader">
-          <summary>Upload course materials</summary>
-          <form class="entry-upload-form" data-entry-form="midterm">
-            <div class="upload-grid">
-              <label>Portfolio category
-                <select name="category" required>
-                  <option value="">Choose a category</option>
-                  <option value="classroom">Classroom Activities and Exercises</option>
-                  <option value="laboratory">Laboratory Activities</option>
-                  <option value="quiz">Quizzes and Assessments</option>
-                  <option value="project">Projects and Performance Tasks</option>
-                  <option value="exam">Examination Results</option>
-                  <option value="other">Other Course Materials</option>
-                </select>
-              </label>
-              <label>Activity or document title
-                <input name="title" type="text" maxlength="180" placeholder="e.g. Activity No. 1 - Data Analysis" required>
-              </label>
-              <label>Activity number <span class="optional-note">optional; used for ascending order</span>
-                <input name="activityNumber" type="number" min="1" step="1" placeholder="e.g. 1">
-              </label>
-            </div>
-            <label>Documents <span class="optional-note">optional; add one or more files</span>
-              <input name="documents" type="file" multiple>
-            </label>
-            <label>Submission screenshots <span class="optional-note">optional; add one or more images</span>
-              <input name="screenshots" type="file" accept="image/png,image/jpeg,image/gif,image/webp" multiple>
-            </label>
-            <p class="upload-help">Attach a document, screenshots, or both. Files are saved in this browser while you prepare the portfolio. Export the portfolio data when you are ready to publish your entries across devices.</p>
-            <label>Description <span class="optional-note">optional</span>
-              <textarea name="description" rows="2" maxlength="1500" placeholder="Briefly describe this activity."></textarea>
-            </label>
-            <label>Instructions or problem statement <span class="optional-note">optional</span>
-              <textarea name="instructions" rows="3" maxlength="5000" placeholder="Add the instructions or problem statement."></textarea>
-            </label>
-            <label>Source code, procedures, or solutions <span class="optional-note">optional</span>
-              <textarea name="solution" rows="3" maxlength="5000" placeholder="Describe the work or procedure."></textarea>
-            </label>
-            <label>Results and explanation <span class="optional-note">optional</span>
-              <textarea name="results" rows="3" maxlength="3000" placeholder="Summarize the result or what you learned."></textarea>
-            </label>
-            <div class="upload-actions">
-              <button class="button button-dark" type="submit">Save this entry <span aria-hidden="true">&#8594;</span></button>
-              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-            </div>
-          </form>
-        </details></div>
+        <div class="portfolio-panel reveal"><div class="panel-heading"><div><span>TERM TWO</span><h3>Midterm portfolio</h3></div><span class="entry-count" data-count="midterm">0 entries</span></div><p class="entry-empty" data-empty-state="midterm">No entries are available in this section yet.</p><div class="entry-list" data-entry-list="midterm" aria-live="polite"></div></div>
       </div>
     </section>
 
     <section class="portfolio-section portfolio-final" id="final" aria-labelledby="final-title">
       <div class="site-width portfolio-layout">
         <div class="portfolio-intro reveal"><p class="eyebrow"><span></span> COURSE PORTFOLIO <b>03</b></p><h2 id="final-title">Final<span>.</span></h2><p>Final activities and projects that bring the course learning together.</p><a class="section-jump" href="#contents">Back to contents <span aria-hidden="true">&#8593;</span></a></div>
-        <div class="portfolio-panel reveal"><div class="panel-heading"><div><span>TERM THREE</span><h3>Final portfolio</h3></div><span class="entry-count" data-count="final">0 entries</span></div><p class="entry-empty" data-empty-state="final">Nikkolai's final work will appear here when its portfolio entries are added.</p><div class="entry-list" data-entry-list="final" aria-live="polite"></div>
-        <details class="entry-uploader">
-          <summary>Upload course materials</summary>
-          <form class="entry-upload-form" data-entry-form="final">
-            <div class="upload-grid">
-              <label>Portfolio category
-                <select name="category" required>
-                  <option value="">Choose a category</option>
-                  <option value="classroom">Classroom Activities and Exercises</option>
-                  <option value="laboratory">Laboratory Activities</option>
-                  <option value="quiz">Quizzes and Assessments</option>
-                  <option value="project">Projects and Performance Tasks</option>
-                  <option value="exam">Examination Results</option>
-                  <option value="other">Other Course Materials</option>
-                </select>
-              </label>
-              <label>Activity or document title
-                <input name="title" type="text" maxlength="180" placeholder="e.g. Activity No. 1 - Data Analysis" required>
-              </label>
-              <label>Activity number <span class="optional-note">optional; used for ascending order</span>
-                <input name="activityNumber" type="number" min="1" step="1" placeholder="e.g. 1">
-              </label>
-            </div>
-            <label>Documents <span class="optional-note">optional; add one or more files</span>
-              <input name="documents" type="file" multiple>
-            </label>
-            <label>Submission screenshots <span class="optional-note">optional; add one or more images</span>
-              <input name="screenshots" type="file" accept="image/png,image/jpeg,image/gif,image/webp" multiple>
-            </label>
-            <p class="upload-help">Attach a document, screenshots, or both. Files are saved in this browser while you prepare the portfolio. Export the portfolio data when you are ready to publish your entries across devices.</p>
-            <label>Description <span class="optional-note">optional</span>
-              <textarea name="description" rows="2" maxlength="1500" placeholder="Briefly describe this activity."></textarea>
-            </label>
-            <label>Instructions or problem statement <span class="optional-note">optional</span>
-              <textarea name="instructions" rows="3" maxlength="5000" placeholder="Add the instructions or problem statement."></textarea>
-            </label>
-            <label>Source code, procedures, or solutions <span class="optional-note">optional</span>
-              <textarea name="solution" rows="3" maxlength="5000" placeholder="Describe the work or procedure."></textarea>
-            </label>
-            <label>Results and explanation <span class="optional-note">optional</span>
-              <textarea name="results" rows="3" maxlength="3000" placeholder="Summarize the result or what you learned."></textarea>
-            </label>
-            <div class="upload-actions">
-              <button class="button button-dark" type="submit">Save this entry <span aria-hidden="true">&#8594;</span></button>
-              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-            </div>
-          </form>
-        </details></div>
+        <div class="portfolio-panel reveal"><div class="panel-heading"><div><span>TERM THREE</span><h3>Final portfolio</h3></div><span class="entry-count" data-count="final">0 entries</span></div><p class="entry-empty" data-empty-state="final">No entries are available in this section yet.</p><div class="entry-list" data-entry-list="final" aria-live="polite"></div></div>
       </div>
     </section>
 
@@ -278,7 +136,7 @@
 
     <section class="profile-section" id="profile" aria-labelledby="profile-title">
       <div class="site-width profile-layout">
-        <div class="profile-art reveal" aria-hidden="true"><span class="profile-orbit"></span><span class="profile-monogram">NY</span><span class="profile-art-label">STUDENT<br>PORTFOLIO</span></div>
+        <div class="profile-art reveal"><span class="profile-orbit" aria-hidden="true"></span><img class="profile-portrait" src="assets/nikkolai-yabut.png" alt="Portrait of Nikkolai Yabut"><span class="profile-art-label">STUDENT<br>PORTFOLIO</span></div>
         <div class="profile-copy reveal"><p class="eyebrow"><span></span> A LITTLE INTRODUCTION</p><h2 id="profile-title">Hello, I'm<br><em>Nikkolai Yabut.</em></h2><h3>Personal introduction</h3><p>I'm an Information Technology student who enjoys learning how digital tools can solve practical problems. I like exploring new ideas, developing my skills through hands-on work, and improving one project at a time.</p><p>This portfolio brings together my course activities and reflections as I continue building a foundation in technology.</p><a class="button button-light" href="#home">Back to the beginning <span aria-hidden="true">&#8593;</span></a></div>
       </div>
     </section>
